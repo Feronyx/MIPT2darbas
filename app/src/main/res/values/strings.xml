@@ -2,7 +2,7 @@
     <string name="app_name">MIPT2darbas</string>
     <string-array name="options_array">
         <item>Sakinių skaičių</item>
-        <item>Sakinių skaičių</item>
+        <item>Žodžių skaičių</item>
         <item>Rašybos ženklų skaičių</item>
         <item>Skaičių skaičių :]</item>
     </string-array>

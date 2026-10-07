@@ -46,12 +46,45 @@ public class MainActivity extends AppCompatActivity {
     public void buttonOnClick(View view) {
         EditText userInput = findViewById(R.id.editTextUserInput);
         TextView outPut = findViewById(R.id.textViewOutput);
-        if(spinner.getSelectedItemPosition()==2){
+        if(!userInput.getText().toString().isEmpty()) {
+            if (spinner.getSelectedItemPosition() == 1) {
 
-            Toast.makeText(this, "selectedChars", Toast.LENGTH_SHORT).show();
-            int result = TextCounter.countChars(userInput.getText().toString());
-            String stringResult = String.valueOf(result);
-            outPut.setText(stringResult);
+                Toast.makeText(this, "selectedWords", Toast.LENGTH_SHORT).show();
+                int result = TextCounter.countWords(userInput.getText().toString());
+                String stringResult = String.valueOf(result);
+                outPut.setText(stringResult);
+
+            }
+            if (spinner.getSelectedItemPosition() == 2) {
+
+                Toast.makeText(this, "selectedChars", Toast.LENGTH_SHORT).show();
+                int result = TextCounter.countChars(userInput.getText().toString());
+                String stringResult = String.valueOf(result);
+                outPut.setText(stringResult);
+
+            }
+            if (spinner.getSelectedItemPosition() == 0) {
+
+                Toast.makeText(this, "selectedSentences", Toast.LENGTH_SHORT).show();
+                int result = TextCounter.countSentences(userInput.getText().toString());
+                String stringResult = String.valueOf(result);
+                outPut.setText(stringResult);
+
+            }
+
+            if (spinner.getSelectedItemPosition() == 3) {
+
+                Toast.makeText(this, "selectedNumbers", Toast.LENGTH_SHORT).show();
+                int result = TextCounter.countNumbers(userInput.getText().toString());
+                String stringResult = String.valueOf(result);
+                outPut.setText(stringResult);
+
+            }
+        }
+        else {
+
+
+            Toast.makeText(this, String.valueOf(spinner.getSelectedItemPosition()), Toast.LENGTH_SHORT).show();
 
         }
 

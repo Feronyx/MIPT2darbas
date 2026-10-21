@@ -19,6 +19,10 @@ public class TextCounter {
 
          int count = 0;
 
+        if (userInput==null) {
+            return 0;
+        }
+
         for (char c : userInput.toCharArray()) {
             if (Character.isDigit(c)) {
                 count++;
